@@ -11,13 +11,39 @@
         android:id="@+id/timesTableSeekBar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_margin="16dp" />
+        android:layout_below="@+id/changeMax"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <ListView
         android:id="@+id/timesTableListView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@+id/timesTableSeekBar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/changeMax"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignBaseline="@+id/maxValue"
+        android:layout_alignBottom="@+id/maxValue"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:onClick="changeMaxValue"
+        android:text="Change Max Value" />
+
+    <EditText
+        android:id="@+id/maxValue"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/timesTableSeekBar" />
+        android:layout_alignParentTop="true"
+        android:contentDescription="Enter a "
+        android:ems="10"
+        android:hint="Enter a number:"
+        android:inputType="number" />
+
 </RelativeLayout>
